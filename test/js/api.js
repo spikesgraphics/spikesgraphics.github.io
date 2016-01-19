@@ -1,6 +1,11 @@
+
+
+// Get the twitch api loaded.
   Twitch.init({clientId: 'mzbri5lzbhbj9fpi0d1ip91hz4lw2b3'}, function(error, status) {
    console.log("Twitch API Loaded");
   });
+
+ // Streamer info.
 Twitch.api({method: 'channels/monstercat'},  function(error, channel) {
   document.getElementById('url').innerHTML += '<a href="' + channel.url + '" target="_blank" >' + channel.display_name + '</a>';
   document.getElementById('status').innerHTML += channel.status
@@ -17,6 +22,15 @@ Twitch.api({method: 'channels/jaysc2'},  function(error, channel) {
   document.getElementById('url4').innerHTML += '<a href="' + channel.url + '" target="_blank" >' + channel.display_name + '</a>';
   document.getElementById('status4').innerHTML += channel.status
 });
+Twitch.api({method: 'channels/dansgaming'},  function(error, channel) {
+  document.getElementById('url5').innerHTML += '<a href="' + channel.url + '" target="_blank" >' + channel.display_name + '</a>';
+  document.getElementById('status5').innerHTML += channel.status
+});
+Twitch.api({method: 'channels/lirik'},  function(error, channel) {
+  document.getElementById('url6').innerHTML += '<a href="' + channel.url + '" target="_blank" >' + channel.display_name + '</a>';
+  document.getElementById('status6').innerHTML += channel.status
+});
+
 
 
 // Offline and Online System
@@ -49,6 +63,22 @@ Twitch.api({method: 'streams/jaysc2'},  function(error, stream) {
     document.getElementById('onoff4').innerHTML += '<i class="fa fa-check-circle-o fa-2x"></i>'
 }
 });
+Twitch.api({method: 'streams/dansgaming'},  function(error, stream) {
+	  if (stream.stream === null) {
+	  	document.getElementById('onoff5').innerHTML += '<i class="fa fa-ban fa-2x"></i>'
+} else {
+    document.getElementById('onoff5').innerHTML += '<i class="fa fa-check-circle-o fa-2x"></i>'
+}
+});
+Twitch.api({method: 'streams/lirik'},  function(error, stream) {
+	  if (stream.stream === null) {
+	  	document.getElementById('onoff6').innerHTML += '<i class="fa fa-ban fa-2x"></i>'
+} else {
+    document.getElementById('onoff6').innerHTML += '<i class="fa fa-check-circle-o fa-2x"></i>'
+}
+});
+
+
 
 
 
