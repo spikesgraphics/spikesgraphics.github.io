@@ -5,6 +5,12 @@
    console.log("Twitch API Loaded");
   });
 
+// Top game atm.
+Twitch.api({method: 'games/top'},  function(error, game) {
+  console.log("Top game is: " + game.name )
+});
+
+
  // Streamer info.
 Twitch.api({method: 'channels/monstercat'},  function(error, channel) {
   document.getElementById('url').innerHTML += '<a href="' + channel.url + '" target="_blank" >' + channel.display_name + '</a>';
