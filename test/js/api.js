@@ -34,6 +34,11 @@ Twitch.api({method: 'channels/dethridgecraft'},  function(error, channel) {
   document.getElementById('url7').innerHTML += '<a href="' + channel.url + '" target="_blank" >' + channel.display_name + '</a>';
   document.getElementById('status7').innerHTML += channel.status;
 });
+Twitch.api({method: 'channels/samsamus1500'},  function(error, channel) {
+  document.getElementById('url8').innerHTML += '<a href="' + channel.url + '" target="_blank" >' + channel.display_name + '</a>';
+  document.getElementById('status8').innerHTML += channel.status;
+});
+
 
 
 // Offline and Online System
@@ -85,5 +90,12 @@ Twitch.api({method: 'streams/dethridgecraft'},  function(error, stream) {
       document.getElementById('onoff7').innerHTML += '<i class="fa fa-ban fa-2x"></i>';
 } else {
     document.getElementById('onoff7').innerHTML += '<i class="fa fa-check-circle-o fa-2x"></i>';
+}
+});
+Twitch.api({method: 'streams/samsamus1500'},  function(error, stream) {
+    if (stream.stream === null) {
+      document.getElementById('onoff8').innerHTML += '<i class="fa fa-ban fa-2x"></i>';
+} else {
+    document.getElementById('onoff8').innerHTML += '<i class="fa fa-check-circle-o fa-2x"></i>';
 }
 });
