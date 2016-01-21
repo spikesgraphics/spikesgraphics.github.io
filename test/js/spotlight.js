@@ -1,5 +1,5 @@
 var spotlight = 1
-var member = "Samsamus1500"
+var member = "Monstercat"
 
 
 if (spotlight === 1) {
