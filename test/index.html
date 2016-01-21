@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 	<head>
 	    <meta charset="utf-8">
@@ -6,11 +6,6 @@
 		<meta name="author" content="Elliot Hesp">
 		
 		<title>SpikesGraphics Twitch API Test</title>
-		
-		<!-- Scripts -->
-		<script src="js/jquery-2.0.3.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/twitch.js"></script>
 		
 
 		<!-- Cascading Style Sheets -->
@@ -42,7 +37,10 @@
 					</ul>
 					</div>
 					</nav>
-
+<center>
+<h4>The current spotlight member is:</h4>
+<div id="spotlight"></div>
+</center>
 		<section>
 			<table class="table table-hover">
 				<thead>
@@ -85,9 +83,18 @@
 						<td><div id="onoff6"></div></td>
 
 					</tr>
+					<tr>
+						<td><div id="url7"></div> </td>
+						<td><div id="status7"></div> </td>
+						<td><div id="onoff7"></div></td>
+
+					</tr>
 				</tbody>
 			</table>
 		</section>
+<div id="spotlight_window">
+
+</div>
 <div class="test">		
 <div class="panel panel-default">
   <div class="panel-body">
@@ -96,6 +103,12 @@
   </div>
 </div>
 </div>
-		<script src="js/api.js"></script>
+		<!-- Scripts -->
+
+<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/twitch.js"></script>
+<script src="js/api.js"></script>
+<script src="js/spotlight.js"></script>
 	</body>
 </html>
