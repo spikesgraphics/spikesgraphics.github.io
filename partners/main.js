@@ -15,3 +15,6 @@ Twitch.api({method: 'channels/imperium_omnia'},  function(error, channel) {
 	document.getElementById('status').innerHTML += '<h3>' + channel.display_name + ' currently playing ' + channel.game + '</h3>' + channel.status
 });
 
+
+
+
