@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="css/flipclock.css" rel="stylesheet" type="text/css">
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+
+	<title></title>
+</head>
+<body>
+<style>
+.container {
+	padding-top: 180px;
+    text-align: center;
+}
+
+.clock {
+    display: inline-block;
+    width: auto;
+}
+</style>
+<div class="container">
+<div class="jumbotron">
+<h1>May 1st announcement</h1>
+<br>
+<center>
+<div class="clock">
+<center>
+Loading
+</center>
+</div>
+</center>
+</div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="js/flipclock.min.js"></script>
+<script type="text/javascript">
+    var date = new Date(2016, 4, 1);
+    var now = new Date();
+    var diff = (date.getTime()/1000) - (now.getTime()/1000);
+
+    var clock = $('.clock').FlipClock(diff,{
+        clockFace: 'DailyCounter',
+        countdown: true
+    });  
+</script>
+</body>
+</html>
